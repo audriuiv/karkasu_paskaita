@@ -7,16 +7,18 @@ import { Header } from "./header";
 type Props = { children: ReactNode };
 export function Site({ children }: Props) {
   return (
-    <Container fluid="md">
+    <>
       <Head>
         <meta charSet="utf-8"></meta>
         <title>Audriaus aplikacija</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Panevėžio kolegija, 2022" />
       </Head>
-      <Header />
-      {children}
-      <Footer />
-    </Container>
+      <Container fluid="md">
+        <Header />
+        {children}
+        <Footer />
+      </Container>
+    </>
   );
 }
